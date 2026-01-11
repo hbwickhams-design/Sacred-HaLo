@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacred HaLo ✦ Permanent Jewelry · Crystals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --light-sage: #9DAA9D;
+            --deep-sage: #6F7F6A;
+            --ivory-cream: #F5F3E7;
+            --taupe-beige: #C9B8A3;
+            --soft-blush: #D6B8B1;
+            --charcoal-sage: #4A5349;
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Lato', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--charcoal-sage);
+            background: var(--ivory-cream);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to bottom, rgba(157, 170, 157, 0.15), var(--ivory-cream));
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            color: var(--deep-sage);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .star {
+            font-size: 2.5rem;
+            color: var(--soft-blush);
+            margin: 0.5rem 0;
+        }
+
+        .hero .tagline {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--deep-sage);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero .quote {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-style: italic;
+            font-weight: 300;
+            color: var(--charcoal-sage);
+            margin: 2rem 0;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background: var(--deep-sage);
+            color: var(--ivory-cream);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(74, 83, 73, 0.2);
+            margin: 1rem 0.5rem;
+        }
+
+        .btn:hover {
+            background: var(--charcoal-sage);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(74, 83, 73, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--soft-blush);
+            color: var(--deep-sage);
+            border: 2px solid var(--deep-sage);
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(214, 184, 177, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: var(--deep-sage);
+            color: var(--ivory-cream);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(74, 83, 73, 0.4);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        section h2 {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            color: var(--deep-sage);
+            text-align: center;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .section-intro {
+            text-align: center;
+            color: var(--charcoal-sage);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .star-divider {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--soft-blush);
+            margin: 1.5rem 0;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(74, 83, 73, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Story Section */
+        .story-section {
+            background: white;
+        }
+
+        .story-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .story-content p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+            color: var(--charcoal-sage);
+        }
+
+        /* Values Grid */
+        .values-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .value-card {
+            background: linear-gradient(135deg, var(--light-sage) 0%, var(--deep-sage) 100%);
+            padding: 2rem 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(74, 83, 73, 0.15);
+            border: 3px solid var(--soft-blush);
+            min-width: 180px;
+            transition: transform 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(214, 184, 177, 0.3);
+        }
+
+        .value-card .icon {
+            font-size: 2.5rem;
+            color: var(--soft-blush);
+            margin-bottom: 1rem;
+        }
+
+        .value-card h3 {
+            font-family: var(--font-display);
+            color: var(--ivory-cream);
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .value-card p {
+            color: var(--ivory-cream);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: linear-gradient(to bottom, rgba(214, 184, 177, 0.15), rgba(157, 170, 157, 0.08));
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 25px rgba(74, 83, 73, 0.12);
+            text-align: center;
+            border: 3px solid var(--soft-blush);
+            transition: transform 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--deep-sage);
+            box-shadow: 0 8px 30px rgba(214, 184, 177, 0.25);
+        }
+
+        .pricing-card .icon {
+            font-size: 3.5rem;
+            color: var(--soft-blush);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--deep-sage);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .pricing-amount {
+            font-size: 1.8rem;
+            color: var(--charcoal-sage);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-card p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(74, 83, 73, 0.08);
+            border: 1px solid var(--taupe-beige);
+        }
+
+        .service-card .icon {
+            font-size: 3rem;
+            color: var(--deep-sage);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--deep-sage);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .service-card strong {
+            color: var(--deep-sage);
+        }
+
+        .service-card .italic {
+            font-style: italic;
+            color: var(--deep-sage);
+            margin-top: 1rem;
+        }
+
+        /* Team Section */
+        .team-section {
+            background: var(--light-sage);
+            color: var(--ivory-cream);
+        }
+
+        .team-section h2,
+        .team-section p {
+            color: var(--ivory-cream);
+        }
+
+        .team-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .team-content p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .team-content strong {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--deep-sage);
+            color: var(--ivory-cream);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: var(--ivory-cream);
+        }
+
+        .cta-section p {
+            color: var(--ivory-cream);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-section .btn {
+            background: var(--ivory-cream);
+            color: var(--deep-sage);
+        }
+
+        .cta-section .btn:hover {
+            background: white;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal-sage);
+            color: var(--ivory-cream);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        footer h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer p {
+            color: var(--ivory-cream);
+            margin: 0.5rem 0;
+            opacity: 0.9;
+        }
+
+        footer a {
+            color: var(--light-sage);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .contact-info {
+            margin: 2rem 0;
+            font-size: 1.05rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .gallery,
+            .pricing-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .value-card {
+                min-width: 250px;
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Sacred HaLo</h1>
+            <div class="star">✦</div>
+            <p class="tagline">Permanent Jewelry · Crystals</p>
+            <p class="quote">"Welcomed. Seen. Understood. Connected."</p>
+            <a href="https://calendly.com/sacredhaloconnection/permanent-jewelry" target="_blank" class="btn">Book Your Appointment</a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section>
+        <div class="container">
+            <h2>Our Jewelry</h2>
+            <p class="section-intro">Each piece tells a story. Permanent jewelry designed to stay with you through life's moments.</p>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/layered-hands.jpg" alt="Layered hand chains">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/healing-crystals.jpg" alt="Healing crystal bracelets">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gold-crystal-bracelet.jpg" alt="Gold crystal bracelet">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/anklets-outdoor.jpg" alt="Anklets outdoor">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/long-chains.jpg" alt="Long chains">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/layered-necklaces.jpg" alt="Layered necklaces">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <h2>Our Story</h2>
+            <div class="star-divider">✦</div>
+            <div class="story-content">
+                <p>Sacred HaLo represents more than just jewelry; it signifies a deep, lasting connection. Founded by Heather Wickham, with Leah Lampkin as her partner, the name "HaLo" symbolizes the bond between the two and the business they've built together.</p>
+                <p>The "HaLo" represents protection, surrounding energy, and the sacred space created for every client. Our mission is to build something meaningful from the ground up, offering handcrafted permanent jewelry and curated crystals as symbols of memories and personal journeys.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Story Section -->
+    <section style="background: linear-gradient(to bottom, rgba(214, 184, 177, 0.08), var(--ivory-cream));">
+        <div class="container">
+            <h2>The Piece I Wear Every Day</h2>
+            <p class="section-intro" style="font-style: italic;">(And Why It's the Best Marketing I've Ever Done)</p>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                <!-- Featured Image -->
+                <div style="margin: 3rem 0; text-align: center;">
+                    <img src="images/hand-chain-silver.jpg" alt="Heather's hand chain" style="max-width: 600px; width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(74, 83, 73, 0.15);">
+                </div>
+                
+                <!-- Story Content -->
+                <div style="background: white; padding: 3rem; border-radius: 8px; box-shadow: 0 4px 20px rgba(74, 83, 73, 0.08); border: 1px solid var(--taupe-beige);">
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">There's a delicate chain connecting my wrist to my ring finger right now.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">Three stones catch the light when I move my hand—my birthstone, my husband's birthstone, and August in the middle.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">August. The month we got married. The month we chose each other in front of everyone we love and promised to keep choosing, even when it gets hard.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">I made this hand chain for myself. Not for content. Not to showcase what Sacred HaLo could do. I made it because I needed to wear what I believe.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 2rem; color: var(--charcoal-sage);">And here's what I've learned since: <strong style="color: var(--deep-sage);">the pieces you wear that actually mean something are the best marketing you'll ever do.</strong></p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">Not because they're pretty—though they can be. Not because they're trendy—though they might catch someone's eye. But because when you wear your story, people see it. And they want to know what it means.</p>
+                    
+                    <div class="star-divider">✦</div>
+                    
+                    <h3 style="font-family: var(--font-display); font-size: 1.8rem; color: var(--deep-sage); margin: 2rem 0 1rem; font-weight: 600;">The Piece Itself</h3>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">Let me describe it for you.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">The chain runs from a bracelet on my wrist down to a ring on my finger. Delicate. Intentional. The kind of thing you don't notice from across the room, but up close—when someone's really looking—it stops them.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">Three stones sit along the chain. Mine. His. And the one that connects us.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">I chose a hand chain specifically because of what it does: it connects. Not just decoratively. Literally. My wrist to my hand. Movement to stillness. The everyday to the symbolic.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">When I type, it shifts. When I reach for something, it moves with me. When I'm frustrated or tired or overwhelmed, I feel it there—a quiet weight that says <em>you're connected. You chose this. You still choose this.</em></p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">I didn't make it to sell. I made it because I needed to wear what I believe.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);"><strong style="color: var(--deep-sage);">And what I believe is this: the jewelry that matters isn't the jewelry that matches everything. It's the jewelry that means something.</strong></p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 2rem; color: var(--charcoal-sage);">This is the story of my hand chain. And why it's the most honest thing Sacred HaLo will ever say about what we believe.</p>
+                    
+                    <p style="font-size: 1.1rem; font-style: italic; color: var(--deep-sage); margin-top: 2rem;">— Heather Wickham, Founder</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section>
+        <div class="container">
+            <h2>Our Values</h2>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="icon">✦</div>
+                    <h3>Authenticity</h3>
+                    <p>Showing up exactly as we are—honest, imperfect, and real.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="icon">✦</div>
+                    <h3>Connection</h3>
+                    <p>Focusing on moments rather than transactions.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="icon">✦</div>
+                    <h3>Compassion</h3>
+                    <p>Honoring feelings and responding with care.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="icon">✦</div>
+                    <h3>Community</h3>
+                    <p>Creating a circle where people feel seen.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="icon">✦</div>
+                    <h3>Integrity</h3>
+                    <p>Leading with honesty and full effort.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2>Pricing</h2>
+            <p class="section-intro">All pieces are custom-fit and permanently welded using high-quality gold-filled chains.</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="icon">✦</div>
+                    <h3>Bracelets</h3>
+                    <p class="pricing-amount">$65+</p>
+                    <p>Starting at $65</p>
+                    <p><strong>Standard 7" bracelet:</strong> $65-$95</p>
+                    <p>Custom sizing available</p>
+                    <a href="https://calendly.com/sacredhaloconnection/permanent-jewelry" target="_blank" class="btn-secondary">Book Now</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="icon">✦</div>
+                    <h3>Anklets</h3>
+                    <p class="pricing-amount">$95+</p>
+                    <p>Starting at $95</p>
+                    <p><strong>Standard 10" anklet:</strong> $95-$130</p>
+                    <p>Custom sizing available</p>
+                    <a href="https://calendly.com/sacredhaloconnection/permanent-jewelry" target="_blank" class="btn-secondary">Book Now</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="icon">✦</div>
+                    <h3>Necklaces</h3>
+                    <p class="pricing-amount">$135+</p>
+                    <p>Starting at $135</p>
+                    <p><strong>16" necklace:</strong> $135-$200</p>
+                    <p>Custom sizing available</p>
+                    <a href="https://calendly.com/sacredhaloconnection/permanent-jewelry" target="_blank" class="btn-secondary">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Add-ons -->
+            <div style="margin-top: 4rem; text-align: center;">
+                <h3 style="font-family: var(--font-display); font-size: 2rem; color: var(--deep-sage); margin-bottom: 2rem;">Personalize Your Piece</h3>
+                <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                    <div>
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">✨</div>
+                        <strong>Charms</strong><br>
+                        $15-$25
+                    </div>
+                    <div>
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">💎</div>
+                        <strong>Birthstone Beads</strong><br>
+                        $12
+                    </div>
+                    <div>
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔗</div>
+                        <strong>Connectors</strong><br>
+                        $18
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section>
+        <div class="container">
+            <h2>What We Offer</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">✦</div>
+                    <h3>Permanent Jewelry</h3>
+                    <p>A bracelet, anklet, or necklace designed to stay with you—no clasp, no taking it off.</p>
+                    <p><strong>How it works:</strong> We custom-fit a gold-filled chain, then weld it closed with a quick, painless spark.</p>
+                    <p class="italic">We'll fit it, weld it, and send you on your way with something that lasts.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">✦</div>
+                    <h3>Curated Crystals</h3>
+                    <p>Intentionally chosen crystals for your personal journey. Each piece is hand-selected with care.</p>
+                    <p>Whether you're drawn to a specific stone or looking for guidance, we help you find crystals that resonate with your intentions.</p>
+                    <p class="italic">Not just stones — symbols of intention and connection.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">✦</div>
+                    <h3>Private Jewelry Parties</h3>
+                    <p>Celebrate your special moments with a permanent jewelry party!</p>
+                    <p><strong>Perfect for:</strong> Bridal showers, bachelorette parties, birthdays, girls' nights, team building events.</p>
+                    <p class="italic">Create connection, celebrate together, and leave with something permanent.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2>Meet the Team</h2>
+            <div class="star-divider">✦</div>
+            <div class="team-content">
+                <p><strong>Heather Wickham, Founder</strong> — Sacred HaLo was born from a vision to create meaningful connections through permanent jewelry and intentionally chosen crystals.</p>
+                <p><strong>Leah Lampkin, Partner</strong> — Working alongside Heather to bring this vision to life, Leah helps create the warm, welcoming experience that makes Sacred HaLo special.</p>
+                <p>Together, we believe in showing up authentically, creating with care, and building a community where everyone feels welcomed and seen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="star-divider">✦</div>
+            <h2>Book Your Appointment</h2>
+            <p>Custom permanent jewelry by appointment. We can't wait to create something meaningful with you.</p>
+            <a href="https://calendly.com/sacredhaloconnection/permanent-jewelry" target="_blank" class="btn">📅 Click Here to Book Your Appointment</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>Sacred HaLo ✦</h3>
+        <p class="tagline">PERMANENT JEWELRY · CRYSTALS</p>
+        
+        <div class="contact-info">
+            <p><strong>Or Contact Us Directly</strong></p>
+            <p><a href="mailto:sacredhaloconnection@gmail.com">sacredhaloconnection@gmail.com</a></p>
+            <p><a href="http://sacredhaloconnection.com">sacredhaloconnection.com</a></p>
+            <p style="margin-top: 1rem;">Located in Idaho · Serving the Treasure Valley and beyond</p>
+        </div>
+        
+        <p style="margin-top: 2rem;">&copy; 2026 Sacred HaLo. Created with intention.</p>
+    </footer>
+</body>
+</html>
