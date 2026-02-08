@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacred HaLo Care Card - Printable</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: 3.5in 2in;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            width: 3.5in;
+            height: 2in;
+            background: #F5F3E7;
+            border: 1px solid #C9B8A3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0.25in;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            page-break-after: always;
+        }
+
+        .card h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24pt;
+            color: #4A5349;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 4px;
+        }
+
+        .star {
+            color: #D6B8B1;
+            font-size: 18pt;
+            margin-bottom: 8px;
+        }
+
+        .qr-code {
+            width: 1.3in;
+            height: 1.3in;
+            margin: 8px 0;
+        }
+
+        .instruction {
+            font-size: 9pt;
+            color: #4A5349;
+            text-align: center;
+            margin-top: 6px;
+            font-weight: 600;
+        }
+
+        .url {
+            font-size: 7pt;
+            color: #6F7F6A;
+            margin-top: 4px;
+        }
+
+        .no-print {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .print-btn {
+            background: #6F7F6A;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .print-btn:hover {
+            background: #4A5349;
+        }
+
+        .instructions-box {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .instructions-box h2 {
+            font-family: 'Cormorant Garamond', serif;
+            color: #4A5349;
+            margin-bottom: 10px;
+        }
+
+        .instructions-box p {
+            color: #4A5349;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="no-print instructions-box">
+        <h2>Sacred HaLo Care Cards - Print Instructions</h2>
+        <p><strong>Card Size:</strong> 3.5" x 2" (Standard business card size)</p>
+        <p><strong>Paper:</strong> Use cardstock (65-110 lb) for best results</p>
+        <p><strong>Print Settings:</strong> Color, High Quality, Borderless (if possible)</p>
+        <p><strong>Tip:</strong> Print a test page on regular paper first to check alignment</p>
+    </div>
+
+    <div class="no-print" style="text-align: center; margin-bottom: 30px;">
+        <button class="print-btn" onclick="window.print()">🖨️ Print Cards</button>
+    </div>
+
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <h1>Sacred HaLo</h1>
+            <div class="star">✦</div>
+            <img src="qr-code-simple.png" alt="QR Code" class="qr-code">
+            <p class="instruction">Scan for Care & Rewards</p>
+            <p class="url">sacredhaloconnection.com/care</p>
+        </div>
+
+        <!-- Card 2 (duplicate for easy printing) -->
+        <div class="card">
+            <h1>Sacred HaLo</h1>
+            <div class="star">✦</div>
+            <img src="qr-code-simple.png" alt="QR Code" class="qr-code">
+            <p class="instruction">Scan for Care & Rewards</p>
+            <p class="url">sacredhaloconnection.com/care</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <h1>Sacred HaLo</h1>
+            <div class="star">✦</div>
+            <img src="qr-code-simple.png" alt="QR Code" class="qr-code">
+            <p class="instruction">Scan for Care & Rewards</p>
+            <p class="url">sacredhaloconnection.com/care</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <h1>Sacred HaLo</h1>
+            <div class="star">✦</div>
+            <img src="qr-code-simple.png" alt="QR Code" class="qr-code">
+            <p class="instruction">Scan for Care & Rewards</p>
+            <p class="url">sacredhaloconnection.com/care</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <h1>Sacred HaLo</h1>
+            <div class="star">✦</div>
+            <img src="qr-code-simple.png" alt="QR Code" class="qr-code">
+            <p class="instruction">Scan for Care & Rewards</p>
+            <p class="url">sacredhaloconnection.com/care</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <h1>Sacred HaLo</h1>
+            <div class="star">✦</div>
+            <img src="qr-code-simple.png" alt="QR Code" class="qr-code">
+            <p class="instruction">Scan for Care & Rewards</p>
+            <p class="url">sacredhaloconnection.com/care</p>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card">
+            <h1>Sacred HaLo</h1>
+            <div class="star">✦</div>
+            <img src="qr-code-simple.png" alt="QR Code" class="qr-code">
+            <p class="instruction">Scan for Care & Rewards</p>
+            <p class="url">sacredhaloconnection.com/care</p>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card">
+            <h1>Sacred HaLo</h1>
+            <div class="star">✦</div>
+            <img src="qr-code-simple.png" alt="QR Code" class="qr-code">
+            <p class="instruction">Scan for Care & Rewards</p>
+            <p class="url">sacredhaloconnection.com/care</p>
+        </div>
+    </div>
+
+    <div class="no-print" style="text-align: center; margin-top: 30px;">
+        <button class="print-btn" onclick="window.print()">🖨️ Print Cards</button>
+    </div>
+</body>
+</html>
