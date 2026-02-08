@@ -979,43 +979,37 @@
     </footer>
 
     <script>
-        // VIP Form Submission
+        // VIP Form Submission to Formspree
         document.getElementById('vipForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
             const formData = new FormData(e.target);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                source: formData.get('source'),
-                timestamp: new Date().toISOString()
-            };
-            
-            // Google Sheets webhook URL - you'll need to set this up
-            const webhookURL = 'YOUR_GOOGLE_SHEETS_WEBHOOK_URL_HERE';
             
             try {
-                // For now, just show success message
-                // Once you set up Google Sheets, we'll connect it
+                const response = await fetch('https://formspree.io/f/mykdyrrv', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
                 const messageDiv = document.getElementById('formMessage');
                 messageDiv.style.display = 'block';
-                messageDiv.style.color = 'var(--deep-sage)';
-                messageDiv.textContent = '✓ Thank you for joining! We\'ll be in touch soon.';
                 
-                // Reset form
-                e.target.reset();
+                if (response.ok) {
+                    messageDiv.style.color = 'var(--deep-sage)';
+                    messageDiv.textContent = '✓ Thank you for joining! We\'ll be in touch soon.';
+                    e.target.reset();
+                } else {
+                    messageDiv.style.color = '#c9302c';
+                    messageDiv.textContent = 'Oops! Something went wrong. Please try again.';
+                }
                 
                 // Hide message after 5 seconds
                 setTimeout(() => {
                     messageDiv.style.display = 'none';
                 }, 5000);
-                
-                // TODO: Send to Google Sheets when webhook is configured
-                // await fetch(webhookURL, {
-                //     method: 'POST',
-                //     body: JSON.stringify(data)
-                // });
                 
             } catch (error) {
                 const messageDiv = document.getElementById('formMessage');
