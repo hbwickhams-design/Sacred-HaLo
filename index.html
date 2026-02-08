@@ -957,5 +957,20 @@
         
         <p style="margin-top: 2rem;">&copy; 2026 Sacred HaLo. Created with intention.</p>
     </footer>
+
+    <script>
+        // Auto-hide event banner after Friday, February 13, 2026 at 5:00 PM Mountain Time
+        (function() {
+            const eventEndDate = new Date('2026-02-13T17:00:00-07:00'); // 5 PM Mountain Time
+            const now = new Date();
+            
+            if (now >= eventEndDate) {
+                const banner = document.querySelector('.event-banner');
+                if (banner) {
+                    banner.style.display = 'none';
+                }
+            }
+        })();
+    </script>
 </body>
 </html>
