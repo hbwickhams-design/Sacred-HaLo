@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacred HaLo ✦ Care & Referral Program</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --light-sage: #9DAA9D;
+            --deep-sage: #6F7F6A;
+            --ivory-cream: #F5F3E7;
+            --taupe-beige: #C9B8A3;
+            --soft-blush: #D6B8B1;
+            --charcoal-sage: #4A5349;
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Lato', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--charcoal-sage);
+            background: var(--ivory-cream);
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            background: var(--deep-sage);
+            color: var(--ivory-cream);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        header h1 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        header .star {
+            font-size: 2rem;
+            color: var(--soft-blush);
+            margin: 0.5rem 0;
+        }
+
+        header .tagline {
+            font-size: 1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+
+        /* Section Styling */
+        section {
+            background: white;
+            margin: 2rem auto;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(74, 83, 73, 0.08);
+            border: 1px solid var(--taupe-beige);
+        }
+
+        section h2 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            color: var(--deep-sage);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        section h3 {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            color: var(--deep-sage);
+            margin: 1.5rem 0 0.8rem;
+            font-weight: 600;
+        }
+
+        .star-divider {
+            text-align: center;
+            font-size: 1.8rem;
+            color: var(--soft-blush);
+            margin: 1.5rem 0;
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: var(--charcoal-sage);
+        }
+
+        ul {
+            margin: 1rem 0 1.5rem 1.5rem;
+            list-style: none;
+        }
+
+        ul li {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        ul li:before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--soft-blush);
+            font-size: 1.2rem;
+        }
+
+        strong {
+            color: var(--deep-sage);
+            font-weight: 700;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-sage) 0%, var(--deep-sage) 100%);
+            color: var(--ivory-cream);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+            border: 3px solid var(--soft-blush);
+        }
+
+        .highlight-box h3 {
+            color: var(--ivory-cream);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            color: var(--ivory-cream);
+            font-size: 1.15rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background: var(--deep-sage);
+            color: var(--ivory-cream);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(74, 83, 73, 0.2);
+            margin: 1rem 0.5rem;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: var(--charcoal-sage);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(74, 83, 73, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal-sage);
+            color: var(--ivory-cream);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            color: var(--ivory-cream);
+            margin: 0.5rem 0;
+        }
+
+        footer a {
+            color: var(--light-sage);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+                margin: 1rem auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Sacred HaLo</h1>
+        <div class="star">✦</div>
+        <p class="tagline">Care & Referral Program</p>
+    </header>
+
+    <div class="container">
+        <!-- Care Instructions Section -->
+        <section id="care">
+            <h2>Caring For Your Permanent Jewelry</h2>
+            <div class="star-divider">✦</div>
+            
+            <p>Your Sacred HaLo piece is designed to stay with you — a permanent bond that moves through life alongside you.</p>
+
+            <h3>Daily Wear</h3>
+            <p>Live freely with your piece. Shower, sleep, and move through your day without worry.</p>
+
+            <h3>What to Avoid</h3>
+            <ul>
+                <li><strong>Chlorine pools & hot tubs</strong> — Weakens the bond and can damage the chain</li>
+                <li><strong>Harsh chemicals</strong> — Cleaning products, bleach, and strong detergents</li>
+                <li><strong>Excessive pulling</strong> — Treat your piece with gentle care</li>
+                <li><strong>Saltwater</strong> — Extended exposure can cause tarnishing over time</li>
+            </ul>
+
+            <h3>If Removal is Needed</h3>
+            <p>Use small scissors or nail clippers to carefully cut the jump ring (the small welded section). Your piece can be re-welded at your next appointment — <strong>free of charge, for life</strong>.</p>
+
+            <h3>Should Your Bond Break</h3>
+            <p>We're here for you. No judgment, just care. Schedule a repair appointment and we'll restore your connection.</p>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://calendly.com/sacredhaloconnection/permanent-jewelry" target="_blank" class="btn">Book a Repair Appointment</a>
+            </div>
+
+            <p style="text-align: center; margin-top: 2rem; font-style: italic; color: var(--deep-sage);">
+                "Held close to the heart. Grounded in ritual."
+            </p>
+        </section>
+
+        <!-- Referral Program Section -->
+        <section id="referral">
+            <h2>Share the Connection</h2>
+            <div class="star-divider">✦</div>
+            
+            <p>When someone you love experiences Sacred HaLo, we want to honor that connection.</p>
+
+            <div class="highlight-box">
+                <h3>Refer a Friend</h3>
+                <p><strong>They receive:</strong> $10 off their first appointment</p>
+                <p><strong>You receive:</strong> $10 credit toward your next piece</p>
+            </div>
+
+            <h3>How It Works</h3>
+            <ul>
+                <li>Share your experience with someone you care about</li>
+                <li>Have them mention your name when they book</li>
+                <li>They get $10 off their first permanent jewelry piece</li>
+                <li>You receive a $10 credit for your next visit or purchase</li>
+                <li>No limit — refer as many friends as you'd like</li>
+            </ul>
+
+            <h3>Referral Credits</h3>
+            <p><strong>Your credits can be used for:</strong></p>
+            <ul>
+                <li>New permanent jewelry pieces</li>
+                <li>Add-ons like charms and birthstone beads</li>
+                <li>Curated crystals (when available in-store)</li>
+                <li>Private jewelry party bookings</li>
+            </ul>
+
+            <p style="margin-top: 1.5rem;"><em>Credits are applied to your account after your friend's appointment is completed. No expiration date.</em></p>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="mailto:sacredhaloconnection@gmail.com?subject=Referral Program Question" class="btn">Questions? Contact Us</a>
+            </div>
+        </section>
+
+        <!-- Back to Main Site -->
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="/" class="btn" style="background: var(--soft-blush); color: var(--deep-sage);">← Back to Sacred HaLo Home</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h3 style="font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 0.5rem;">Sacred HaLo ✦</h3>
+        <p style="letter-spacing: 2px; font-size: 0.9rem;">PERMANENT JEWELRY · CRYSTALS</p>
+        <div style="margin: 1.5rem 0;">
+            <p><a href="mailto:sacredhaloconnection@gmail.com">sacredhaloconnection@gmail.com</a></p>
+            <p><a href="https://sacredhaloconnection.com">sacredhaloconnection.com</a></p>
+        </div>
+        <p style="margin-top: 1.5rem; font-size: 0.9rem;">&copy; 2026 Sacred HaLo. Created with intention.</p>
+    </footer>
+</body>
+</html>
