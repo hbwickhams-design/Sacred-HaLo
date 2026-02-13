@@ -95,6 +95,24 @@ h3 {
     font-weight: 300;
 }
 
+.logo-text {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: var(--deep-sage);
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-size: 1rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--deep-sage);
+    margin-bottom: var(--spacing-lg);
+    font-weight: 300;
+}
+
 .logo-image {
     max-width: 700px;
     width: 90%;
