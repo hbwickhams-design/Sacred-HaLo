@@ -34,6 +34,34 @@ body {
     overflow-x: hidden;
 }
 
+/* Back to Home Link */
+.back-to-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.back-to-home a {
+    color: var(--deep-sage);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(74, 83, 73, 0.15);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.back-to-home a:hover {
+    background: var(--ivory-cream);
+    transform: translateX(-3px);
+    box-shadow: 0 4px 15px rgba(74, 83, 73, 0.2);
+}
+
 /* Container */
 .container {
     max-width: 1200px;
