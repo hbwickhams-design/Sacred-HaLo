@@ -3,330 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sacred HaLo ✦ Care & Referral Program</title>
+    <title>Sacred HaLo - Care & Referral Guide</title>
+    <meta name="description" content="Care instructions and referral program for Sacred HaLo permanent jewelry">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --light-sage: #9DAA9D;
-            --deep-sage: #6F7F6A;
-            --ivory-cream: #F5F3E7;
-            --taupe-beige: #C9B8A3;
-            --soft-blush: #D6B8B1;
-            --charcoal-sage: #4A5349;
-            --font-display: 'Cormorant Garamond', serif;
-            --font-body: 'Lato', sans-serif;
-        }
-
-        body {
-            font-family: var(--font-body);
-            line-height: 1.6;
-            color: var(--charcoal-sage);
-            background: var(--ivory-cream);
-            padding: 0;
-            margin: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        /* Header */
-        header {
-            background: var(--deep-sage);
-            color: var(--ivory-cream);
-            text-align: center;
-            padding: 3rem 2rem;
-        }
-
-        header h1 {
-            font-family: var(--font-display);
-            font-size: 3rem;
-            font-weight: 300;
-            letter-spacing: 3px;
-            margin-bottom: 0.5rem;
-        }
-
-        header .star {
-            font-size: 2rem;
-            color: var(--soft-blush);
-            margin: 0.5rem 0;
-        }
-
-        header .tagline {
-            font-size: 1rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            opacity: 0.9;
-        }
-
-        /* Section Styling */
-        section {
-            background: white;
-            margin: 2rem auto;
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(74, 83, 73, 0.08);
-            border: 1px solid var(--taupe-beige);
-        }
-
-        section h2 {
-            font-family: var(--font-display);
-            font-size: 2.2rem;
-            color: var(--deep-sage);
-            margin-bottom: 1rem;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        section h3 {
-            font-family: var(--font-display);
-            font-size: 1.6rem;
-            color: var(--deep-sage);
-            margin: 1.5rem 0 0.8rem;
-            font-weight: 600;
-        }
-
-        .star-divider {
-            text-align: center;
-            font-size: 1.8rem;
-            color: var(--soft-blush);
-            margin: 1.5rem 0;
-        }
-
-        p {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            margin-bottom: 1rem;
-            color: var(--charcoal-sage);
-        }
-
-        ul {
-            margin: 1rem 0 1.5rem 1.5rem;
-            list-style: none;
-        }
-
-        ul li {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        ul li:before {
-            content: "✦";
-            position: absolute;
-            left: 0;
-            color: var(--soft-blush);
-            font-size: 1.2rem;
-        }
-
-        strong {
-            color: var(--deep-sage);
-            font-weight: 700;
-        }
-
-        .highlight-box {
-            background: linear-gradient(135deg, var(--light-sage) 0%, var(--deep-sage) 100%);
-            color: var(--ivory-cream);
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            margin: 2rem 0;
-            border: 3px solid var(--soft-blush);
-        }
-
-        .highlight-box h3 {
-            color: var(--ivory-cream);
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .highlight-box p {
-            color: var(--ivory-cream);
-            font-size: 1.15rem;
-            margin-bottom: 0.8rem;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            background: var(--deep-sage);
-            color: var(--ivory-cream);
-            padding: 1rem 2.5rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(74, 83, 73, 0.2);
-            margin: 1rem 0.5rem;
-            text-align: center;
-        }
-
-        .btn:hover {
-            background: var(--charcoal-sage);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(74, 83, 73, 0.3);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--charcoal-sage);
-            color: var(--ivory-cream);
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-
-        footer p {
-            color: var(--ivory-cream);
-            margin: 0.5rem 0;
-        }
-
-        footer a {
-            color: var(--light-sage);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: white;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            section h2 {
-                font-size: 1.8rem;
-            }
-
-            .container {
-                padding: 1rem;
-            }
-
-            section {
-                padding: 1.5rem;
-                margin: 1rem auto;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Sacred HaLo</h1>
-        <div class="star">✦</div>
-        <p class="tagline">Care & Referral Program</p>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <img src="https://www.genspark.ai/api/files/s/MFIy8CAb" alt="Sacred HaLo - Permanent Jewelry · Crystals" class="logo-image">
+            <p class="essence">"Welcomed. Seen. Understood. Connected."</p>
+        </div>
     </header>
 
-    <div class="container">
-        <!-- Care Instructions Section -->
-        <section id="care">
-            <h2>Caring For Your Permanent Jewelry</h2>
-            <div class="star-divider">✦</div>
+    <!-- Care Instructions Section -->
+    <section class="care-section">
+        <div class="container">
+            <h2 class="section-title">Caring for Your Sacred HaLo</h2>
+            <p class="intro-text">Your permanent jewelry is designed to stay with you through life's moments. Here's how to keep it beautiful.</p>
             
-            <p>Your Sacred HaLo piece is designed to stay with you — a permanent bond that moves through life alongside you.</p>
-
-            <h3>Daily Wear</h3>
-            <p>Live freely with your piece. Shower, sleep, and move through your day without worry.</p>
-
-            <h3>What to Avoid</h3>
-            <ul>
-                <li><strong>Chlorine pools & hot tubs</strong> — Weakens the bond and can damage the chain</li>
-                <li><strong>Harsh chemicals</strong> — Cleaning products, bleach, and strong detergents</li>
-                <li><strong>Excessive pulling</strong> — Treat your piece with gentle care</li>
-                <li><strong>Saltwater</strong> — Extended exposure can cause tarnishing over time</li>
-            </ul>
-
-            <h3>If Removal is Needed</h3>
-            <p>Use small scissors or nail clippers to carefully cut the jump ring (the small welded section). Your piece can be re-welded at your next appointment.</p>
-
-            <h3>Lifetime Free Re-Welds</h3>
-            <p><strong>Free re-welds for life</strong> apply to chains purchased from Sacred HaLo by the original purchaser.</p>
-            <p style="margin-top: 0.8rem;"><em>Important: Free re-welds are non-transferable and only available for the original wearer. Chains purchased elsewhere or transferred to another person will incur a service fee.</em></p>
-
-            <h3>Should Your Bond Break</h3>
-            <p>We're here for you. No judgment, just care. Schedule a repair appointment and we'll restore your connection.</p>
-
-            <h3>Location & Hours</h3>
-            <p><strong>Based in Idaho</strong> — Serving Caldwell, Nampa, Meridian, Boise & the Treasure Valley</p>
-            <p style="margin-top: 0.8rem;">By appointment only. We create a dedicated space for each client.</p>
-
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://calendly.com/sacredhaloconnection/permanent-jewelry" target="_blank" class="btn">Book Your Appointment</a>
+            <div class="care-grid">
+                <div class="care-card">
+                    <div class="care-icon">💧</div>
+                    <h3>Daily Wear</h3>
+                    <p>Safe for showers, swimming, and everyday activities. Your jewelry is as resilient as your connection.</p>
+                </div>
+                
+                <div class="care-card">
+                    <div class="care-icon">🚫</div>
+                    <h3>What to Avoid</h3>
+                    <p>Limit exposure to harsh chemicals, chlorine, and saltwater. Remove for hot tubs and spray tans.</p>
+                </div>
+                
+                <div class="care-card">
+                    <div class="care-icon">✂️</div>
+                    <h3>If Removal is Needed</h3>
+                    <p>For medical procedures or travel, carefully snip with small scissors. Keep the piece—we'll re-weld it for free.</p>
+                </div>
+                
+                <div class="care-card">
+                    <div class="care-icon">🔗</div>
+                    <h3>Reconnection</h3>
+                    <p>Bring your jewelry back anytime for complimentary re-welding. The bond continues.</p>
+                </div>
+                
+                <div class="care-card">
+                    <div class="care-icon">✨</div>
+                    <h3>Keep It Shining</h3>
+                    <p>Gently clean with warm water and mild soap. Pat dry with a soft cloth. Avoid abrasive materials.</p>
+                </div>
+                
+                <div class="care-card">
+                    <div class="care-icon">💚</div>
+                    <h3>Lifetime Promise</h3>
+                    <p>We're here for repairs, adjustments, and reconnections. Your Sacred HaLo is forever.</p>
+                </div>
             </div>
-
-            <p style="text-align: center; margin-top: 2rem; font-style: italic; color: var(--deep-sage);">
-                "Held close to the heart. Grounded in ritual."
-            </p>
-        </section>
-
-        <!-- Referral Program Section -->
-        <section id="referral">
-            <h2>Share the Connection</h2>
-            <div class="star-divider">✦</div>
-            
-            <p>When someone you love experiences Sacred HaLo, we want to honor that connection.</p>
-
-            <div class="highlight-box">
-                <h3>Refer a Friend</h3>
-                <p><strong>They receive:</strong> $10 off their first appointment</p>
-                <p><strong>You receive:</strong> $10 credit toward your next piece</p>
-            </div>
-
-            <h3>How It Works</h3>
-            <ul>
-                <li>Share your experience with someone you care about</li>
-                <li>Have them mention your name when they book</li>
-                <li>They get $10 off their first permanent jewelry piece</li>
-                <li>You receive a $10 credit for your next visit or purchase</li>
-                <li>No limit — refer as many friends as you'd like</li>
-            </ul>
-
-            <h3>Referral Credits</h3>
-            <p><strong>Your credits can be used for:</strong></p>
-            <ul>
-                <li>New permanent jewelry pieces</li>
-                <li>Add-ons like charms and birthstone beads</li>
-                <li>Curated crystals (when available in-store)</li>
-                <li>Private jewelry party bookings</li>
-            </ul>
-
-            <p style="margin-top: 1.5rem;"><em>Credits are applied to your account after your friend's appointment is completed. No expiration date.</em></p>
-
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="mailto:sacredhaloconnection@gmail.com?subject=Referral Program Question" class="btn">Questions? Contact Us</a>
-            </div>
-        </section>
-
-        <!-- Back to Main Site -->
-        <div style="text-align: center; margin: 2rem 0;">
-            <a href="/" class="btn" style="background: var(--soft-blush); color: var(--deep-sage);">← Back to Sacred HaLo Home</a>
         </div>
-    </div>
+    </section>
+
+    <!-- Referral Section -->
+    <section class="referral-section">
+        <div class="container">
+            <h2 class="section-title">Share the Connection</h2>
+            <p class="intro-text">Love your Sacred HaLo? Share the experience with someone special.</p>
+            
+            <div class="referral-card">
+                <div class="offer">
+                    <span class="offer-amount">$10 OFF</span>
+                    <p class="offer-text">for you and your friend</p>
+                </div>
+                
+                <div class="how-it-works">
+                    <h3>How It Works</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <p>Share your unique referral link</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <p>They book their appointment</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <p>You both receive $10 off</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="share-section">
+                    <p class="share-title">Share Now</p>
+                    <div class="button-group">
+                        <button class="share-btn instagram-btn" onclick="SacredHaloReferral.shareReferral('instagram')">
+                            📷 Instagram
+                        </button>
+                        <button class="share-btn text-btn" onclick="SacredHaloReferral.shareReferral('text')">
+                            💬 Text
+                        </button>
+                        <button class="share-btn email-btn" onclick="SacredHaloReferral.shareReferral('email')">
+                            ✉️ Email
+                        </button>
+                        <button class="share-btn copy-btn" onclick="SacredHaloReferral.copyLink()">
+                            🔗 Copy Link
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIP Sign-Up Section -->
+    <section class="vip-section">
+        <div class="container">
+            <h2 class="section-title">Join Our VIP Community</h2>
+            <p class="intro-text">Exclusive perks, early access, and special offers for our most connected customers.</p>
+            
+            <div class="vip-card">
+                <div class="vip-content">
+                    <div class="vip-text">
+                        <h3>✦ VIP Membership ✦</h3>
+                        <p class="vip-benefits">As a VIP member, you'll receive:</p>
+                        <ul class="vip-list">
+                            <li>✨ Priority booking for appointments</li>
+                            <li>💎 Exclusive access to new designs</li>
+                            <li>🎁 Special birthday surprises</li>
+                            <li>💝 Members-only events & parties</li>
+                            <li>💰 Extra discounts on services</li>
+                        </ul>
+                        <p class="vip-cta-text">Scan the QR code or click below to join!</p>
+                        <a href="http://eepurl.com/jy45VQ" class="cta-button vip-button" target="_blank" rel="noopener">Join VIP Community</a>
+                    </div>
+                    
+                    <div class="vip-qr">
+                        <div class="qr-container">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=http://eepurl.com/jy45VQ" alt="VIP Sign-Up QR Code" class="qr-code">
+                            <p class="qr-label">Scan to Join VIP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Connect With Us</h2>
+            <div class="contact-grid">
+                <a href="https://www.vagaro.com/sacredhalo" class="contact-card" target="_blank" rel="noopener">
+                    <div class="contact-icon">📅</div>
+                    <h3>Book Appointment</h3>
+                    <p>Schedule your visit</p>
+                </a>
+                
+                <a href="https://www.instagram.com/sacredhaloconnection" class="contact-card" target="_blank" rel="noopener">
+                    <div class="contact-icon">📷</div>
+                    <h3>Instagram</h3>
+                    <p>@sacredhaloconnection</p>
+                </a>
+                
+                <a href="mailto:hello@sacredhalo.com" class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>hello@sacredhalo.com</p>
+                </a>
+                
+                <a href="tel:+15551234567" class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>Call Us</h3>
+                    <p>(555) 123-4567</p>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer>
-        <h3 style="font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 0.5rem;">Sacred HaLo ✦</h3>
-        <p style="letter-spacing: 2px; font-size: 0.9rem;">PERMANENT JEWELRY · CRYSTALS</p>
-        <div style="margin: 1.5rem 0;">
-            <p><a href="mailto:sacredhaloconnection@gmail.com">sacredhaloconnection@gmail.com</a></p>
-            <p><a href="https://sacredhaloconnection.com">sacredhaloconnection.com</a></p>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-tagline">Held close to the heart. Grounded in ritual.</p>
+            <img src="https://www.genspark.ai/api/files/s/MFIy8CAb" alt="Sacred HaLo" class="footer-logo-image">
+            <p class="copyright">&copy; 2026 Sacred HaLo. All rights reserved.</p>
         </div>
-        <p style="margin-top: 1.5rem; font-size: 0.9rem;">&copy; 2026 Sacred HaLo. Created with intention.</p>
     </footer>
+
+    <!-- Notification Toast -->
+    <div id="notification" class="notification"></div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
