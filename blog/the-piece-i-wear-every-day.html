@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Piece I Wear Every Day - Sacred HaLo Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --light-sage: #9DAA9D;
+            --deep-sage: #6F7F6A;
+            --ivory-cream: #F5F3E7;
+            --taupe-beige: #C9B8A3;
+            --soft-blush: #D6B8B1;
+            --charcoal-sage: #4A5349;
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Lato', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--charcoal-sage);
+            background: var(--ivory-cream);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--ivory-cream);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(74, 83, 73, 0.1);
+            border-bottom: 1px solid var(--taupe-beige);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 0 1rem;
+        }
+
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--deep-sage);
+            text-decoration: none;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--charcoal-sage);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background: var(--deep-sage);
+            color: var(--ivory-cream);
+        }
+
+        /* Blog Post */
+        .blog-post {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .blog-post h1 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--deep-sage);
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .blog-post .subtitle {
+            text-align: center;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--charcoal-sage);
+            margin-bottom: 1rem;
+        }
+
+        .blog-post .date {
+            text-align: center;
+            color: var(--light-sage);
+            font-size: 0.9rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blog-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(74, 83, 73, 0.08);
+            border: 1px solid var(--taupe-beige);
+        }
+
+        .blog-content p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+            color: var(--charcoal-sage);
+        }
+
+        .blog-content h3 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--deep-sage);
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-content strong {
+            color: var(--deep-sage);
+        }
+
+        .blog-content em {
+            font-style: italic;
+        }
+
+        .star-divider {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--soft-blush);
+            margin: 2rem 0;
+        }
+
+        .blog-image {
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .blog-image img {
+            max-width: 600px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(74, 83, 73, 0.15);
+        }
+
+        .author {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--deep-sage);
+            margin-top: 2rem;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .back-link a {
+            display: inline-block;
+            color: var(--deep-sage);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 2px solid var(--soft-blush);
+            padding-bottom: 2px;
+            transition: all 0.3s;
+        }
+
+        .back-link a:hover {
+            color: var(--soft-blush);
+            border-bottom-color: var(--deep-sage);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal-sage);
+            color: var(--ivory-cream);
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: var(--light-sage);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .blog-post h1 {
+                font-size: 2rem;
+            }
+
+            .blog-content {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="/" class="nav-logo">Sacred HaLo <span style="color: var(--soft-blush);">✦</span></a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/blog">Blog</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#services">Services</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Post -->
+    <article class="blog-post">
+        <h1>The Piece I Wear Every Day</h1>
+        <p class="subtitle">(And Why It's the Best Marketing I've Ever Done)</p>
+        <div class="date">February 2026</div>
+
+        <div class="blog-content">
+            <p>There's a delicate chain connecting my wrist to my ring finger right now.</p>
+            
+            <p>Three stones catch the light when I move my hand—my birthstone, my husband's birthstone, and August in the middle.</p>
+            
+            <p>August. The month we got married. The month we chose each other in front of everyone we love and promised to keep choosing, even when it gets hard.</p>
+            
+            <p>I made this hand chain for myself. Not for content. Not to showcase what Sacred HaLo could do. I made it because I needed to wear what I believe.</p>
+            
+            <p>And here's what I've learned since: <strong>the pieces you wear that actually mean something are the best marketing you'll ever do.</strong></p>
+            
+            <p>Not because they're pretty—though they can be. Not because they're trendy—though they might catch someone's eye. But because when you wear your story, people see it. And they want to know what it means.</p>
+            
+            <div class="star-divider">✦</div>
+            
+            <h3>The Piece Itself</h3>
+            
+            <p>Let me describe it for you.</p>
+            
+            <p>The chain runs from a bracelet on my wrist down to a ring on my finger. Delicate. Intentional. The kind of thing you don't notice from across the room, but up close—when someone's really looking—it stops them.</p>
+            
+            <p>Three stones sit along the chain. Mine. His. And the one that connects us.</p>
+            
+            <p>I chose a hand chain specifically because of what it does: it connects. Not just decoratively. Literally. My wrist to my hand. Movement to stillness. The everyday to the symbolic.</p>
+            
+            <p>When I type, it shifts. When I reach for something, it moves with me. When I'm frustrated or tired or overwhelmed, I feel it there—a quiet weight that says <em>you're connected. You chose this. You still choose this.</em></p>
+            
+            <p>I didn't make it to sell. I made it because I needed to wear what I believe.</p>
+            
+            <p><strong>And what I believe is this: the jewelry that matters isn't the jewelry that matches everything. It's the jewelry that means something.</strong></p>
+            
+            <p>This is the story of my hand chain. And why it's the most honest thing Sacred HaLo will ever say about what we believe.</p>
+            
+            <p class="author">— Heather Wickham, Founder</p>
+        </div>
+
+        <div class="blog-image">
+            <img src="/images/hand-chain-new.jpg" alt="Heather's hand chain with layered bracelets">
+        </div>
+
+        <div class="back-link">
+            <a href="/blog">← Back to Blog</a>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sacred HaLo. Created with intention.</p>
+        <p style="margin-top: 1rem;"><a href="/">Back to Home</a></p>
+    </footer>
+</body>
+</html>
