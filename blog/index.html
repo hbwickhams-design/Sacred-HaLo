@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Sacred HaLo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --light-sage: #9DAA9D;
+            --deep-sage: #6F7F6A;
+            --ivory-cream: #F5F3E7;
+            --taupe-beige: #C9B8A3;
+            --soft-blush: #D6B8B1;
+            --charcoal-sage: #4A5349;
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Lato', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--charcoal-sage);
+            background: var(--ivory-cream);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--ivory-cream);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(74, 83, 73, 0.1);
+            border-bottom: 1px solid var(--taupe-beige);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 0 1rem;
+        }
+
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--deep-sage);
+            text-decoration: none;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--charcoal-sage);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background: var(--deep-sage);
+            color: var(--ivory-cream);
+        }
+
+        /* Blog Header */
+        .blog-header {
+            background: linear-gradient(to bottom, rgba(157, 170, 157, 0.15), var(--ivory-cream));
+            text-align: center;
+            padding: 5rem 2rem 3rem;
+        }
+
+        .blog-header h1 {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: var(--deep-sage);
+            margin-bottom: 1rem;
+        }
+
+        .blog-header p {
+            font-size: 1.2rem;
+            color: var(--charcoal-sage);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Blog List */
+        .blog-list {
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .blog-post-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 20px rgba(74, 83, 73, 0.1);
+            border: 1px solid var(--taupe-beige);
+            transition: transform 0.3s;
+        }
+
+        .blog-post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(74, 83, 73, 0.15);
+        }
+
+        .blog-post-card h2 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            color: var(--deep-sage);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .blog-post-card .date {
+            color: var(--light-sage);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blog-post-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--charcoal-sage);
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-post-card a {
+            display: inline-block;
+            color: var(--deep-sage);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 2px solid var(--soft-blush);
+            transition: all 0.3s;
+        }
+
+        .blog-post-card a:hover {
+            color: var(--soft-blush);
+            border-bottom-color: var(--deep-sage);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal-sage);
+            color: var(--ivory-cream);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        footer a {
+            color: var(--light-sage);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .blog-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="/" class="nav-logo">Sacred HaLo <span style="color: var(--soft-blush);">✦</span></a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/blog">Blog</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#services">Services</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <div class="blog-header">
+        <h1>Stories & Insights</h1>
+        <p>Thoughts on connection, intention, and the jewelry that matters</p>
+    </div>
+
+    <!-- Blog List -->
+    <div class="blog-list">
+        <article class="blog-post-card">
+            <h2>The Piece I Wear Every Day</h2>
+            <div class="date">February 2026</div>
+            <p>There's a delicate chain connecting my wrist to my ring finger right now. Three stones catch the light when I move my hand—my birthstone, my husband's birthstone, and August in the middle...</p>
+            <a href="/blog/the-piece-i-wear-every-day.html">Read More →</a>
+        </article>
+
+        <!-- More blog posts will go here -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sacred HaLo. Created with intention.</p>
+        <p style="margin-top: 1rem;"><a href="/">Back to Home</a></p>
+    </footer>
+</body>
+</html>
