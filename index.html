@@ -175,7 +175,7 @@
 
         /* Story Section */
         .story-section {
-            background: linear-gradient(to bottom, rgba(157, 170, 157, 0.12), var(--ivory-cream));
+            background: white;
         }
 
         .story-content {
@@ -253,7 +253,7 @@
         }
 
         .pricing-card {
-            background: var(--light-sage);
+            background: white;
             padding: 2.5rem;
             border-radius: 12px;
             box-shadow: 0 6px 25px rgba(74, 83, 73, 0.12);
@@ -270,21 +270,21 @@
 
         .pricing-card .icon {
             font-size: 3.5rem;
-            color: var(--ivory-cream);
+            color: var(--soft-blush);
             margin-bottom: 1rem;
         }
 
         .pricing-card h3 {
             font-family: var(--font-display);
             font-size: 2rem;
-            color: var(--ivory-cream);
+            color: var(--deep-sage);
             margin-bottom: 0.5rem;
             font-weight: 600;
         }
 
         .pricing-amount {
             font-size: 1.8rem;
-            color: var(--ivory-cream);
+            color: var(--charcoal-sage);
             font-weight: 700;
             margin-bottom: 1.5rem;
         }
@@ -292,7 +292,6 @@
         .pricing-card p {
             margin-bottom: 1rem;
             line-height: 1.7;
-            color: var(--ivory-cream);
         }
 
         /* Services Section */
@@ -427,167 +426,6 @@
             font-size: 1.05rem;
         }
 
-        /* How It Works Section */
-        .how-it-works {
-            background: var(--light-sage);
-            padding: 3rem 2rem;
-        }
-
-        .how-it-works h2 {
-            color: var(--ivory-cream);
-        }
-
-        .steps-grid {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 2rem auto 0;
-            flex-wrap: nowrap;
-        }
-
-        @media (max-width: 968px) {
-            .steps-grid {
-                flex-wrap: wrap;
-            }
-        }
-
-        .step-item {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 200px;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: var(--soft-blush);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .step-item h3 {
-            color: var(--charcoal-sage);
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background: var(--ivory-cream);
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(74, 83, 73, 0.1);
-            border-bottom: 1px solid var(--taupe-beige);
-        }
-
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            padding: 0 1rem;
-        }
-
-        .nav-logo {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            color: var(--deep-sage);
-            text-decoration: none;
-            font-weight: 300;
-            letter-spacing: 2px;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .nav-logo:hover {
-            color: var(--charcoal-sage);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        }
-
-        nav a {
-            color: var(--charcoal-sage);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-
-        nav a:hover {
-            background: var(--deep-sage);
-            color: var(--ivory-cream);
-        }
-
-        /* Smooth scroll offset for sticky nav */
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-
-        /* Event Banner */
-        .event-banner {
-            background: var(--soft-blush);
-            color: var(--charcoal-sage);
-            text-align: center;
-            padding: 1.5rem 2rem;
-            border-bottom: 3px solid var(--deep-sage);
-            position: relative;
-        }
-
-        .event-banner h2 {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            color: var(--charcoal-sage);
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .event-banner p {
-            font-size: 1.1rem;
-            margin: 0.3rem 0;
-            line-height: 1.6;
-            color: var(--charcoal-sage);
-        }
-
-        .event-banner strong {
-            font-weight: 700;
-            color: var(--charcoal-sage);
-        }
-
-        .event-banner .special-offer {
-            background: var(--deep-sage);
-            color: var(--ivory-cream);
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
-            margin-top: 1rem;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -614,64 +452,31 @@
                 width: 100%;
                 max-width: 350px;
             }
-
-            nav a {
-                font-size: 0.8rem;
-                padding: 0.4rem 0.6rem;
-            }
-
-            .nav-logo {
-                font-size: 1.5rem;
-            }
-
-            nav .container {
-                justify-content: center;
-            }
-
-            .nav-links {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .event-banner h2 {
-                font-size: 1.4rem;
-            }
-
-            .event-banner p {
-                font-size: 1rem;
-            }
-
-            .event-banner .special-offer {
-                font-size: 1.1rem;
-                padding: 0.7rem 1.2rem;
-            }
         }
+
+        /* Small Special Banner */
+        .special-banner {
+            background: var(--soft-blush);
+            text-align: center;
+            padding: 0.8rem 1rem;
+            font-size: 0.95rem;
+            color: var(--charcoal-sage);
+            border-bottom: 2px solid var(--deep-sage);
+        }
+
+        .special-banner strong {
+            font-weight: 700;
+            color: var(--deep-sage);
+        }
+
     </style>
 </head>
 <body>
-    <!-- Event Banner -->
-    <div class="event-banner">
-        <h2>💝 Find Us This Friday at the Nampa Chamber Vendor Market! 💝</h2>
-        <p><strong>Friday, February 13th · 12-4pm</strong></p>
-        <p>Nampa Chamber of Commerce · 323 11th Ave S, Nampa, ID 83651</p>
-        <div class="special-offer">Valentine's Special: Heart Bracelets $55 ✨ Limited Quantity!</div>
+    <!-- SMALL SPECIAL BANNER - REMOVE AFTER SATURDAY 5PM -->
+    <div class="special-banner">
+        🎀 <strong>This Friday 2/28</strong> · Spud State Cares Bazaar · 10am-6pm · <strong>Special: $50 Bracelets</strong> (Puppy Paws, Gold-Filled, Sterling Silver) · 1001 W Hemingway Blvd, Nampa 🎀
     </div>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="container">
-            <a href="/" class="nav-logo">Sacred HaLo <span style="color: var(--soft-blush);">✦</span></a>
-            <div class="nav-links">
-                <a href="#story">About</a>
-                <a href="/blog">Blog</a>
-                <a href="#values">Values</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#services">Services</a>
-                <a href="#team">Team</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </nav>
+    <!-- END SPECIAL BANNER -->
 
     <!-- Hero Section -->
     <section class="hero">
@@ -684,41 +489,37 @@
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section class="how-it-works">
+    <!-- Gallery Section -->
+    <section>
         <div class="container">
-            <h2>How It Works</h2>
+            <h2>Our Jewelry</h2>
+            <p class="section-intro">Each piece tells a story. Permanent jewelry designed to stay with you through life's moments.</p>
             
-            <div class="steps-grid">
-                <div class="step-item">
-                    <div class="step-number">1</div>
-                    <h3>Book your appointment</h3>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/layered-hands.jpg" alt="Layered hand chains">
                 </div>
-                
-                <div class="step-item">
-                    <div class="step-number">2</div>
-                    <h3>Choose your chain & intention</h3>
+                <div class="gallery-item">
+                    <img src="images/healing-crystals.jpg" alt="Healing crystal bracelets">
                 </div>
-                
-                <div class="step-item">
-                    <div class="step-number">3</div>
-                    <h3>Custom fit & welded on</h3>
+                <div class="gallery-item">
+                    <img src="images/gold-crystal-bracelet.jpg" alt="Gold crystal bracelet">
                 </div>
-                
-                <div class="step-item">
-                    <div class="step-number">4</div>
-                    <h3>Wear it — with lifetime re-weld support</h3>
+                <div class="gallery-item">
+                    <img src="images/anklets-outdoor.jpg" alt="Anklets outdoor">
                 </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 2.5rem;">
-                <a href="https://calendly.com/sacredhaloconnection/permanent-jewelry" target="_blank" class="btn">Book Now</a>
+                <div class="gallery-item">
+                    <img src="images/long-chains.jpg" alt="Long chains">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/layered-necklaces.jpg" alt="Layered necklaces">
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Story Section -->
-    <section id="story" class="story-section">
+    <section class="story-section">
         <div class="container">
             <h2>Our Story</h2>
             <div class="star-divider">✦</div>
@@ -729,8 +530,60 @@
         </div>
     </section>
 
+    <!-- Personal Story Section -->
+    <section style="background: linear-gradient(to bottom, rgba(214, 184, 177, 0.08), var(--ivory-cream));">
+        <div class="container">
+            <h2>The Piece I Wear Every Day</h2>
+            <p class="section-intro" style="font-style: italic;">(And Why It's the Best Marketing I've Ever Done)</p>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                <!-- Featured Image -->
+                <div style="margin: 3rem 0; text-align: center;">
+                    <img src="images/hand-chain-silver.jpg" alt="Heather's hand chain" style="max-width: 600px; width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(74, 83, 73, 0.15);">
+                </div>
+                
+                <!-- Story Content -->
+                <div style="background: white; padding: 3rem; border-radius: 8px; box-shadow: 0 4px 20px rgba(74, 83, 73, 0.08); border: 1px solid var(--taupe-beige);">
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">There's a delicate chain connecting my wrist to my ring finger right now.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">Three stones catch the light when I move my hand—my birthstone, my husband's birthstone, and August in the middle.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">August. The month we got married. The month we chose each other in front of everyone we love and promised to keep choosing, even when it gets hard.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">I made this hand chain for myself. Not for content. Not to showcase what Sacred HaLo could do. I made it because I needed to wear what I believe.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 2rem; color: var(--charcoal-sage);">And here's what I've learned since: <strong style="color: var(--deep-sage);">the pieces you wear that actually mean something are the best marketing you'll ever do.</strong></p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">Not because they're pretty—though they can be. Not because they're trendy—though they might catch someone's eye. But because when you wear your story, people see it. And they want to know what it means.</p>
+                    
+                    <div class="star-divider">✦</div>
+                    
+                    <h3 style="font-family: var(--font-display); font-size: 1.8rem; color: var(--deep-sage); margin: 2rem 0 1rem; font-weight: 600;">The Piece Itself</h3>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">Let me describe it for you.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">The chain runs from a bracelet on my wrist down to a ring on my finger. Delicate. Intentional. The kind of thing you don't notice from across the room, but up close—when someone's really looking—it stops them.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">Three stones sit along the chain. Mine. His. And the one that connects us.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">I chose a hand chain specifically because of what it does: it connects. Not just decoratively. Literally. My wrist to my hand. Movement to stillness. The everyday to the symbolic.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">When I type, it shifts. When I reach for something, it moves with me. When I'm frustrated or tired or overwhelmed, I feel it there—a quiet weight that says <em>you're connected. You chose this. You still choose this.</em></p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);">I didn't make it to sell. I made it because I needed to wear what I believe.</p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--charcoal-sage);"><strong style="color: var(--deep-sage);">And what I believe is this: the jewelry that matters isn't the jewelry that matches everything. It's the jewelry that means something.</strong></p>
+                    
+                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 2rem; color: var(--charcoal-sage);">This is the story of my hand chain. And why it's the most honest thing Sacred HaLo will ever say about what we believe.</p>
+                    
+                    <p style="font-size: 1.1rem; font-style: italic; color: var(--deep-sage); margin-top: 2rem;">— Heather Wickham, Founder</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Values Section -->
-    <section id="values">
+    <section>
         <div class="container">
             <h2>Our Values</h2>
             
@@ -769,7 +622,7 @@
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="pricing-section">
+    <section class="pricing-section">
         <div class="container">
             <h2>Pricing</h2>
             <p class="section-intro">All pieces are custom-fit and permanently welded using high-quality gold-filled chains.</p>
@@ -778,99 +631,60 @@
                 <div class="pricing-card">
                     <div class="icon">✦</div>
                     <h3>Bracelets</h3>
-                    <p class="pricing-amount">Starting at $40</p>
-                    <p>Stainless Steel: $40</p>
-                    <p>Sterling Silver: $65</p>
-                    <p>Signature Collection: $75</p>
-                    <p>Luxury Line: $105</p>
+                    <p class="pricing-amount">$65+</p>
+                    <p>Starting at $65</p>
+                    <p><strong>Standard 7" bracelet:</strong> $65-$95</p>
+                    <p>Custom sizing available</p>
                     <a href="https://calendly.com/sacredhaloconnection/permanent-jewelry" target="_blank" class="btn-secondary">Book Now</a>
                 </div>
 
                 <div class="pricing-card">
                     <div class="icon">✦</div>
                     <h3>Anklets</h3>
-                    <p class="pricing-amount">Starting at $55</p>
-                    <p>Stainless Steel: $55</p>
-                    <p>Sterling Silver: $85</p>
-                    <p>Signature Collection: $95</p>
-                    <p>Luxury Line: $130</p>
+                    <p class="pricing-amount">$95+</p>
+                    <p>Starting at $95</p>
+                    <p><strong>Standard 10" anklet:</strong> $95-$130</p>
+                    <p>Custom sizing available</p>
                     <a href="https://calendly.com/sacredhaloconnection/permanent-jewelry" target="_blank" class="btn-secondary">Book Now</a>
                 </div>
 
                 <div class="pricing-card">
                     <div class="icon">✦</div>
                     <h3>Necklaces</h3>
-                    <p class="pricing-amount">Starting at $95</p>
-                    <p>Stainless Steel: $95</p>
-                    <p>Sterling Silver: $135</p>
-                    <p>Signature Collection: $150</p>
-                    <p>Luxury Line: $200</p>
+                    <p class="pricing-amount">$135+</p>
+                    <p>Starting at $135</p>
+                    <p><strong>16" necklace:</strong> $135-$200</p>
+                    <p>Custom sizing available</p>
                     <a href="https://calendly.com/sacredhaloconnection/permanent-jewelry" target="_blank" class="btn-secondary">Book Now</a>
                 </div>
             </div>
 
             <!-- Add-ons -->
             <div style="margin-top: 4rem; text-align: center;">
-                <h3 style="font-family: var(--font-display); font-size: 2rem; color: var(--deep-sage); margin-bottom: 2rem;">✨ Personalize Your Piece</h3>
-                <div style="display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
-                    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(74, 83, 73, 0.1); min-width: 250px; text-align: center;">
-                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">✨</div>
-                        <h4 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--deep-sage); margin-bottom: 0.5rem; font-weight: 600;">Classic Accent</h4>
-                        <p style="color: var(--charcoal-sage); margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.6;">Small charms + simple birthstone beads</p>
-                        <p style="font-size: 1.5rem; font-weight: 700; color: var(--deep-sage);">$20</p>
+                <h3 style="font-family: var(--font-display); font-size: 2rem; color: var(--deep-sage); margin-bottom: 2rem;">Personalize Your Piece</h3>
+                <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                    <div>
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">✨</div>
+                        <strong>Charms</strong><br>
+                        $15-$25
                     </div>
-                    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(74, 83, 73, 0.1); min-width: 250px; text-align: center;">
-                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">💎</div>
-                        <h4 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--deep-sage); margin-bottom: 0.5rem; font-weight: 600;">Elevated Accent</h4>
-                        <p style="color: var(--charcoal-sage); margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.6;">Wire-wrapped birthstones + larger design charms</p>
-                        <p style="font-size: 1.5rem; font-weight: 700; color: var(--deep-sage);">$30</p>
+                    <div>
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">💎</div>
+                        <strong>Birthstone Beads</strong><br>
+                        $12
                     </div>
-                    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(74, 83, 73, 0.1); min-width: 250px; text-align: center;">
-                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔗</div>
-                        <h4 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--deep-sage); margin-bottom: 0.5rem; font-weight: 600;">Signature Connector</h4>
-                        <p style="color: var(--charcoal-sage); margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.6;">Crystal settings, crowns, and focal statement pieces</p>
-                        <p style="font-size: 1.5rem; font-weight: 700; color: var(--deep-sage);">$30</p>
+                    <div>
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔗</div>
+                        <strong>Connectors</strong><br>
+                        $18
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Special Offers Section -->
-    <section style="background: linear-gradient(to bottom, rgba(157, 170, 157, 0.08), var(--ivory-cream)); padding: 4rem 2rem;">
-        <div class="container">
-            <h2 style="font-family: var(--font-display); font-size: 2.8rem; color: var(--deep-sage); text-align: center; margin-bottom: 1rem; font-weight: 300;">✨ Special Offers</h2>
-            <p class="section-intro" style="text-align: center; color: var(--charcoal-sage); max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem; line-height: 1.8;">Celebrate connection and build your stack with these limited-time offers</p>
-            
-            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; max-width: 900px; margin: 0 auto;">
-                <!-- The Bonded Pair -->
-                <div style="background: var(--light-sage); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(74, 83, 73, 0.15); border: 2px solid var(--soft-blush); text-align: center; flex: 1; min-width: 280px;">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">✨</div>
-                    <h3 style="font-family: var(--font-display); font-size: 1.8rem; color: white; margin-bottom: 0.5rem; font-weight: 600;">The Bonded Pair</h3>
-                    <p style="font-size: 1.6rem; color: var(--ivory-cream); font-weight: 700; margin-bottom: 1rem;">Two Classic Bracelets – $120</p>
-                    <p style="color: var(--ivory-cream); line-height: 1.6; margin-bottom: 0.5rem;">Celebrate your connection — however it looks.</p>
-                    <p style="color: var(--ivory-cream); font-style: italic; font-size: 0.95rem;">Upgrades available</p>
-                </div>
-
-                <!-- Stack & Save -->
-                <div style="background: var(--light-sage); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(74, 83, 73, 0.15); border: 2px solid var(--soft-blush); text-align: center; flex: 1; min-width: 280px;">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">✨</div>
-                    <h3 style="font-family: var(--font-display); font-size: 1.8rem; color: white; margin-bottom: 0.5rem; font-weight: 600;">Stack & Save</h3>
-                    <p style="font-size: 1.4rem; color: var(--ivory-cream); font-weight: 700; margin-bottom: 0.5rem;">Two Classic Bracelets – $120</p>
-                    <p style="font-size: 1.4rem; color: var(--ivory-cream); font-weight: 700; margin-bottom: 1rem;">Three Classic Bracelets – $180</p>
-                    <p style="color: var(--ivory-cream); line-height: 1.6; margin-bottom: 0.5rem;">Build your stack. Layer with intention.</p>
-                    <p style="color: var(--ivory-cream); font-style: italic; font-size: 0.95rem;">Upgrades available</p>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://calendly.com/sacredhaloconnection/permanent-jewelry" target="_blank" class="btn">Book Your Special Offer</a>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" style="background: linear-gradient(to bottom, var(--ivory-cream), rgba(157, 170, 157, 0.08)); padding: 4rem 2rem;">
+    <section>
         <div class="container">
             <h2>What We Offer</h2>
             
@@ -903,7 +717,7 @@
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="team-section">
+    <section class="team-section">
         <div class="container">
             <h2>Meet the Team</h2>
             <div class="star-divider">✦</div>
@@ -916,7 +730,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section id="contact" class="cta-section">
+    <section class="cta-section">
         <div class="container">
             <div class="star-divider">✦</div>
             <h2>Book Your Appointment</h2>
@@ -932,60 +746,12 @@
         
         <div class="contact-info">
             <p><strong>Or Contact Us Directly</strong></p>
-            <p><a href="mailto:hello@sacredhaloconnection.com">hello@sacredhaloconnection.com</a></p>
-            <p><a href="tel:+12085593231">208-559-3231</a></p>
+            <p><a href="mailto:sacredhaloconnection@gmail.com">sacredhaloconnection@gmail.com</a></p>
             <p><a href="http://sacredhaloconnection.com">sacredhaloconnection.com</a></p>
             <p style="margin-top: 1rem;">Located in Idaho · Serving the Treasure Valley and beyond</p>
         </div>
         
-        <!-- VIP Email Signup Form -->
-        <div style="margin-top: 2.5rem; padding: 2rem; background: white; border-radius: 8px; max-width: 500px; margin-left: auto; margin-right: auto;">
-            <h3 style="font-family: var(--font-display); font-size: 1.8rem; color: var(--deep-sage); text-align: center; margin-bottom: 0.5rem;">✨ Join Our VIP List ✨</h3>
-            <p style="text-align: center; color: var(--charcoal-sage); margin-bottom: 1.5rem; font-size: 0.95rem;">Get exclusive updates, special offers, and be the first to know about events!</p>
-            
-            <form action="https://gmail.us19.list-manage.com/subscribe/post?u=4ee080f299b2dca8dc7befcd2&id=31bc3a0ad0" method="POST" target="_blank" style="display: flex; flex-direction: column; gap: 1rem;">
-                <!-- Hidden Mailchimp fields -->
-                <input type="hidden" name="u" value="4ee080f299b2dca8dc7befcd2">
-                <input type="hidden" name="id" value="31bc3a0ad0">
-                
-                <input type="text" name="FNAME" placeholder="Your Name *" required style="padding: 0.8rem; border: 2px solid var(--taupe-beige); border-radius: 5px; font-family: var(--font-body); font-size: 1rem;">
-                
-                <input type="email" name="EMAIL" placeholder="Email Address *" required style="padding: 0.8rem; border: 2px solid var(--taupe-beige); border-radius: 5px; font-family: var(--font-body); font-size: 1rem;">
-                
-                <input type="tel" name="PHONE" placeholder="Phone Number (optional)" style="padding: 0.8rem; border: 2px solid var(--taupe-beige); border-radius: 5px; font-family: var(--font-body); font-size: 1rem;">
-                
-                <input type="text" name="MMERGE6" placeholder="How did you hear about Sacred HaLo?" style="padding: 0.8rem; border: 2px solid var(--taupe-beige); border-radius: 5px; font-family: var(--font-body); font-size: 1rem;">
-                
-                <!-- Real people should not fill this in -->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                    <input type="text" name="b_4ee080f299b2dca8dc7befcd2_31bc3a0ad0" tabindex="-1" value="">
-                </div>
-                
-                <button type="submit" style="background: var(--deep-sage); color: var(--ivory-cream); padding: 1rem; border: none; border-radius: 50px; font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: all 0.3s; font-family: var(--font-body);">Sign Me Up!</button>
-            </form>
-        </div>
-        
-        <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(157, 170, 157, 0.2); border-radius: 8px;">
-            <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>✨ Referral Program</strong></p>
-            <p style="margin-bottom: 0;">Refer a friend and you both receive $10 — <a href="/care" style="color: var(--ivory-cream); text-decoration: underline;">Learn More</a></p>
-        </div>
-        
         <p style="margin-top: 2rem;">&copy; 2026 Sacred HaLo. Created with intention.</p>
     </footer>
-
-    <script>
-        // Auto-hide event banner after Friday, February 13, 2026 at 5:00 PM Mountain Time
-        (function() {
-            const eventEndDate = new Date('2026-02-13T17:00:00-07:00'); // 5 PM Mountain Time
-            const now = new Date();
-            
-            if (now >= eventEndDate) {
-                const banner = document.querySelector('.event-banner');
-                if (banner) {
-                    banner.style.display = 'none';
-                }
-            }
-        })();
-    </script>
 </body>
 </html>
