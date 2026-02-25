@@ -306,9 +306,15 @@
         .service-card {
             background: white;
             padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(74, 83, 73, 0.08);
-            border: 1px solid var(--taupe-beige);
+            border-radius: 12px;
+            box-shadow: 0 6px 25px rgba(74, 83, 73, 0.12);
+            border: 3px solid var(--light-sage);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(74, 83, 73, 0.18);
         }
 
         .service-card .icon {
@@ -810,8 +816,8 @@
             </div>
 
             <!-- Add-ons -->
-            <div style="margin-top: 4rem; text-align: center;">
-                <h3 style="font-family: var(--font-display); font-size: 2rem; color: var(--deep-sage); margin-bottom: 2rem;">✨ Personalize Your Piece</h3>
+            <div style="margin-top: 4rem; background: var(--light-sage); padding: 3rem 2rem; border-radius: 12px; box-shadow: 0 6px 25px rgba(74, 83, 73, 0.15);">
+                <h3 style="font-family: var(--font-display); font-size: 2rem; color: var(--ivory-cream); margin-bottom: 2rem; text-align: center;">✨ Personalize Your Piece</h3>
                 <div style="display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
                     <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(74, 83, 73, 0.1); min-width: 250px; text-align: center;">
                         <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">✨</div>
