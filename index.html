@@ -116,6 +116,78 @@
             box-shadow: 0 6px 20px rgba(74, 83, 73, 0.4);
         }
 
+        /* Special Announcement Banner */
+        .special-announcement {
+            background: linear-gradient(135deg, var(--soft-blush) 0%, var(--light-sage) 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 4px solid var(--deep-sage);
+            border-bottom: 4px solid var(--deep-sage);
+        }
+
+        .special-announcement h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--ivory-cream);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(74, 83, 73, 0.3);
+        }
+
+        .special-announcement .ribbon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .special-announcement .event-title {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--deep-sage);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .bazaar-specials {
+            background: var(--ivory-cream);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 700px;
+            margin: 2rem auto;
+            box-shadow: 0 8px 25px rgba(74, 83, 73, 0.2);
+            border: 3px solid var(--deep-sage);
+        }
+
+        .bazaar-specials .special-item {
+            font-size: 1.2rem;
+            color: var(--charcoal-sage);
+            margin: 1rem 0;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        .bazaar-specials .special-item strong {
+            color: var(--deep-sage);
+            font-weight: 700;
+        }
+
+        .bazaar-date {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--ivory-cream);
+            margin-top: 2rem;
+            font-weight: 600;
+            font-style: italic;
+            text-shadow: 1px 1px 3px rgba(74, 83, 73, 0.3);
+        }
+
+        .bazaar-date .star {
+            color: var(--soft-blush);
+            font-size: 1.8rem;
+            margin: 0 0.5rem;
+        }
+
         /* Section Styling */
         section {
             padding: 5rem 2rem;
@@ -193,22 +265,28 @@
 
         /* Values Grid */
         .values-grid {
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
-            flex-wrap: wrap;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .value-card {
             background: linear-gradient(135deg, var(--light-sage) 0%, var(--deep-sage) 100%);
-            padding: 2rem 2.5rem;
+            padding: 2rem 1.5rem;
             border-radius: 12px;
             text-align: center;
             box-shadow: 0 6px 20px rgba(74, 83, 73, 0.15);
             border: 3px solid var(--soft-blush);
-            min-width: 180px;
             transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 240px;
         }
 
         .value-card:hover {
@@ -220,6 +298,7 @@
             font-size: 2.5rem;
             color: var(--soft-blush);
             margin-bottom: 1rem;
+            flex-shrink: 0;
         }
 
         .value-card h3 {
@@ -228,13 +307,17 @@
             font-size: 1.5rem;
             margin-bottom: 0.8rem;
             font-weight: 600;
+            flex-shrink: 0;
         }
 
         .value-card p {
             color: var(--ivory-cream);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             line-height: 1.6;
             opacity: 0.95;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
         }
 
         /* Pricing Section */
@@ -605,14 +688,12 @@
             }
 
             .values-grid {
-                flex-direction: column;
-                align-items: center;
+                grid-template-columns: 1fr;
+                max-width: 350px;
             }
 
             .value-card {
-                min-width: 250px;
-                width: 100%;
-                max-width: 350px;
+                min-height: 220px;
             }
 
             nav a {
@@ -649,12 +730,19 @@
     </style>
 </head>
 <body>
-    <!-- Event Banner -->
-    <div class="event-banner">
-        <h2>💝 Find Us This Friday at the Nampa Chamber Vendor Market! 💝</h2>
-        <p><strong>Friday, February 13th · 12-4pm</strong></p>
-        <p>Nampa Chamber of Commerce · 323 11th Ave S, Nampa, ID 83651</p>
-        <div class="special-offer">Valentine's Special: Heart Bracelets $55 ✨ Limited Quantity!</div>
+    <!-- Event Banner - February 13th Valentine's Event -->
+    <div class="event-banner event-banner-feb13" style="padding: 1rem 1.5rem;">
+        <h2 style="font-size: 1.3rem; margin-bottom: 0.4rem;">💝 Nampa Chamber Vendor Market 💝</h2>
+        <p style="margin: 0.2rem 0;"><strong>Friday, Feb 13th · 12-4pm</strong> · 323 11th Ave S, Nampa</p>
+        <div class="special-offer" style="font-size: 1rem; padding: 0.5rem 1rem; margin-top: 0.5rem; display: inline-block;">Valentine's Special: Heart Bracelets $55 ✨</div>
+    </div>
+
+    <!-- Event Banner - February 28th Bazaar -->
+    <div class="event-banner event-banner-feb28" style="padding: 1rem 1.5rem;">
+        <h2 style="font-size: 1.3rem; margin-bottom: 0.4rem;">🎀 February 28th Bazaar Special 🎀</h2>
+        <p style="margin: 0.2rem 0;"><strong>$50 Specials:</strong> 🐾 Puppy Paws · ✨ Dainty Gold-Filled · ✨ Dainty Sterling Silver</p>
+        <p style="margin: 0.3rem 0; font-size: 0.95rem;"><strong>Friday, Feb 28th · 10am-6pm</strong> · Spud State Cares Center · 1001 W Hemingway Blvd, Nampa</p>
+    </div>
     </div>
 
     <!-- Navigation Bar -->
@@ -681,6 +769,27 @@
             <p class="tagline">Permanent Jewelry · Crystals</p>
             <p class="quote">"Welcomed. Seen. Understood. Connected."</p>
             <a href="https://calendly.com/sacredhaloconnection/permanent-jewelry" target="_blank" class="btn">Book Your Appointment</a>
+        </div>
+    </section>
+
+    <!-- Special Announcement: February Bazaar -->
+    <section class="special-announcement">
+        <div class="container">
+            <div class="ribbon">🎀</div>
+            <h2>Sacred HaLo — February Bazaar Special</h2>
+            
+            <div class="bazaar-specials">
+                <div class="special-item">🐾 <strong>Puppy Paws bracelet</strong> — $50</div>
+                <div class="special-item">✨ <strong>Dainty Gold-Filled bracelet</strong> — $50</div>
+                <div class="special-item">✨ <strong>Dainty Sterling Silver bracelet</strong> — $50</div>
+                <div class="special-item">📣 <strong>Additional styles available at the booth</strong> — just ask!</div>
+            </div>
+            
+            <p class="bazaar-date">
+                <span class="star">✦</span>
+                February 28th only — Spud State Cares Bazaar
+                <span class="star">✦</span>
+            </p>
         </div>
     </section>
 
@@ -810,26 +919,26 @@
             </div>
 
             <!-- Add-ons -->
-            <div style="margin-top: 4rem; text-align: center;">
-                <h3 style="font-family: var(--font-display); font-size: 2rem; color: var(--deep-sage); margin-bottom: 2rem;">✨ Personalize Your Piece</h3>
-                <div style="display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
-                    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(74, 83, 73, 0.1); min-width: 250px; text-align: center;">
-                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">✨</div>
-                        <h4 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--deep-sage); margin-bottom: 0.5rem; font-weight: 600;">Classic Accent</h4>
-                        <p style="color: var(--charcoal-sage); margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.6;">Small charms + simple birthstone beads</p>
-                        <p style="font-size: 1.5rem; font-weight: 700; color: var(--deep-sage);">$20</p>
+            <div style="margin-top: 3.5rem; text-align: center;">
+                <h3 style="font-family: var(--font-display); font-size: 1.8rem; color: var(--deep-sage); margin-bottom: 1.5rem; font-weight: 400;">✨ Personalize Your Piece</h3>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; max-width: 900px; margin: 0 auto;">
+                    <div style="background: white; padding: 1.5rem 1.25rem; border-radius: 8px; box-shadow: 0 3px 12px rgba(74, 83, 73, 0.08); border: 1px solid var(--taupe-beige); flex: 1; min-width: 180px; max-width: 240px; text-align: center;">
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">✨</div>
+                        <h4 style="font-family: var(--font-display); font-size: 1.2rem; color: var(--deep-sage); margin-bottom: 0.4rem; font-weight: 600;">Classic Accent</h4>
+                        <p style="color: var(--charcoal-sage); margin-bottom: 0.75rem; font-size: 0.85rem; line-height: 1.5;">Small charms + birthstone beads</p>
+                        <p style="font-size: 1.3rem; font-weight: 700; color: var(--deep-sage);">$20</p>
                     </div>
-                    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(74, 83, 73, 0.1); min-width: 250px; text-align: center;">
-                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">💎</div>
-                        <h4 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--deep-sage); margin-bottom: 0.5rem; font-weight: 600;">Elevated Accent</h4>
-                        <p style="color: var(--charcoal-sage); margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.6;">Wire-wrapped birthstones + larger design charms</p>
-                        <p style="font-size: 1.5rem; font-weight: 700; color: var(--deep-sage);">$30</p>
+                    <div style="background: white; padding: 1.5rem 1.25rem; border-radius: 8px; box-shadow: 0 3px 12px rgba(74, 83, 73, 0.08); border: 1px solid var(--taupe-beige); flex: 1; min-width: 180px; max-width: 240px; text-align: center;">
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">💎</div>
+                        <h4 style="font-family: var(--font-display); font-size: 1.2rem; color: var(--deep-sage); margin-bottom: 0.4rem; font-weight: 600;">Elevated Accent</h4>
+                        <p style="color: var(--charcoal-sage); margin-bottom: 0.75rem; font-size: 0.85rem; line-height: 1.5;">Wire-wrapped birthstones + larger charms</p>
+                        <p style="font-size: 1.3rem; font-weight: 700; color: var(--deep-sage);">$30</p>
                     </div>
-                    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(74, 83, 73, 0.1); min-width: 250px; text-align: center;">
-                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔗</div>
-                        <h4 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--deep-sage); margin-bottom: 0.5rem; font-weight: 600;">Signature Connector</h4>
-                        <p style="color: var(--charcoal-sage); margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.6;">Crystal settings, crowns, and focal statement pieces</p>
-                        <p style="font-size: 1.5rem; font-weight: 700; color: var(--deep-sage);">$30</p>
+                    <div style="background: white; padding: 1.5rem 1.25rem; border-radius: 8px; box-shadow: 0 3px 12px rgba(74, 83, 73, 0.08); border: 1px solid var(--taupe-beige); flex: 1; min-width: 180px; max-width: 240px; text-align: center;">
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🔗</div>
+                        <h4 style="font-family: var(--font-display); font-size: 1.2rem; color: var(--deep-sage); margin-bottom: 0.4rem; font-weight: 600;">Signature Connector</h4>
+                        <p style="color: var(--charcoal-sage); margin-bottom: 0.75rem; font-size: 0.85rem; line-height: 1.5;">Crystal settings, crowns, statement pieces</p>
+                        <p style="font-size: 1.3rem; font-weight: 700; color: var(--deep-sage);">$30</p>
                     </div>
                 </div>
             </div>
@@ -974,13 +1083,23 @@
     </footer>
 
     <script>
-        // Auto-hide event banner after Friday, February 13, 2026 at 5:00 PM Mountain Time
+        // Auto-hide event banners after their respective end times
         (function() {
-            const eventEndDate = new Date('2026-02-13T17:00:00-07:00'); // 5 PM Mountain Time
             const now = new Date();
             
-            if (now >= eventEndDate) {
-                const banner = document.querySelector('.event-banner');
+            // February 13th event ends at 5:00 PM Mountain Time
+            const feb13EndDate = new Date('2026-02-13T17:00:00-07:00');
+            if (now >= feb13EndDate) {
+                const banner = document.querySelector('.event-banner-feb13');
+                if (banner) {
+                    banner.style.display = 'none';
+                }
+            }
+            
+            // February 28th event ends at 5:00 PM on Saturday, March 1st (next day)
+            const feb28EndDate = new Date('2026-03-01T17:00:00-07:00');
+            if (now >= feb28EndDate) {
+                const banner = document.querySelector('.event-banner-feb28');
                 if (banner) {
                     banner.style.display = 'none';
                 }
