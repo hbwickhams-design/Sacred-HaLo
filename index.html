@@ -1005,7 +1005,11 @@
                 <input type="hidden" name="u" value="4ee080f299b2dca8dc7befcd2">
                 <input type="hidden" name="id" value="31bc3a0ad0">
                 
-                <input type="text" name="FNAME" placeholder="Your Name *" required style="padding: 0.8rem; border: 2px solid var(--taupe-beige); border-radius: 5px; font-family: var(--font-body); font-size: 1rem;">
+                <!-- First and Last Name on Same Line -->
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <input type="text" name="FNAME" placeholder="First Name *" required style="flex: 1; min-width: 200px; padding: 0.8rem; border: 2px solid var(--taupe-beige); border-radius: 5px; font-family: var(--font-body); font-size: 1rem;">
+                    <input type="text" name="LNAME" placeholder="Last Name *" required style="flex: 1; min-width: 200px; padding: 0.8rem; border: 2px solid var(--taupe-beige); border-radius: 5px; font-family: var(--font-body); font-size: 1rem;">
+                </div>
                 
                 <input type="email" name="EMAIL" placeholder="Email Address *" required style="padding: 0.8rem; border: 2px solid var(--taupe-beige); border-radius: 5px; font-family: var(--font-body); font-size: 1rem;">
                 
